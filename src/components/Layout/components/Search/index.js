@@ -9,6 +9,7 @@ import classNames from 'classnames/bind';
 import { useState, useEffect, useRef } from 'react';
 import { useDebouce } from '~/hooks';
 import { SearchIcon } from '~/components/Icons';
+import * as searchServices from '~/apiServices/searchServices';
 
 const cx = classNames.bind(styles);
 
@@ -28,17 +29,16 @@ function Search() {
             return;
         }
 
-        setLoading(true)
+        const fetchApi = async () => {
+            setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouced)}&type=less`)
-        .then(res => res.json())
-        .then(async (res) => {
-            setSearchResult(res.data);
-            setLoading(false)
-        })
-        .catch(error => {
-            setLoading(false)
-        })
+            const result = await searchServices.search(debouced);
+
+            setSearchResult(result);
+            setLoading(false);
+        };
+        fetchApi();
+
     }, [debouced]);
 
     const handleClear = () => {
