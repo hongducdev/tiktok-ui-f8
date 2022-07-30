@@ -9,7 +9,7 @@ import classNames from 'classnames/bind';
 import { useState, useEffect, useRef } from 'react';
 import { useDebouce } from '~/hooks';
 import { SearchIcon } from '~/components/Icons';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchServices';
 
 const cx = classNames.bind(styles);
 
