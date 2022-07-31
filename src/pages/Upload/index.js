@@ -1,5 +1,5 @@
-function Upload() {
-    return <h2>Upload page</h2>;
+function Live() {
+    return <h2>Live page</h2>;
 }
 
-export default Upload;
+export default Live;
