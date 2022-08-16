@@ -1,0 +1,65 @@
+.wrapper {
+    margin-top: 8px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.label {
+    color: rgb(22 24 35 / 75%);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.more-btn {
+    padding: 0px 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    color: #fe2c55;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+// account item
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.account-item:hover {
+    background: rgba(22, 24, 35, 0.03);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nickname {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+.check {
+    color: rgb(32, 213, 236);
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.name {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 260px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
